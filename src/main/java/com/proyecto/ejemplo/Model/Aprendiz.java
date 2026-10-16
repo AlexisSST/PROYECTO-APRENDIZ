@@ -5,26 +5,50 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+/**
+ * Entidad que representa a un Aprendiz en la base de datos.
+ * Mapea los datos de la tabla correspondiente.
+ * 
+ * @author AlexisSST
+ * @version 1.0
+ */
 
 @Entity
 
-
+// Reemplaza por el nombre real de tu tabla si aplica
 public class Aprendiz {
     
+     // Identificador único de la entidad (Llave primaria)
     @Id
     @Column
     private Long iduser;
+    
+     // Nombre de usuario del aprendiz
     @Column
     private String nomuser;
+    
+    
+    // Apellidos completos del aprendiz
      @Column
     private String apellidos;
+     
+      // Correo electrónico de contacto
      @Column
     private String email;
 
+     /**
+     * Obtiene el ID del usuario.
+     * @return Long con el ID del usuario.
+     */
     public Long getIduser() {
         return iduser;
     }
 
+     /**
+     * Asigna o actualiza el ID del usuario.
+     * @param iduser El nuevo ID a asignar.
+     */
+    
     public void setIduser(Long iduser) {
         this.iduser = iduser;
     }
