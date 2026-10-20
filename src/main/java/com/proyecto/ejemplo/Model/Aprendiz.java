@@ -4,6 +4,7 @@ package com.proyecto.ejemplo.Model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Data;
 
 /**
  * Entidad que representa a un Aprendiz en la base de datos.
@@ -14,6 +15,7 @@ import jakarta.persistence.Id;
  */
 
 @Entity
+@Data
 
 // Reemplaza por el nombre real de tu tabla si aplica
 public class Aprendiz {
@@ -24,16 +26,16 @@ public class Aprendiz {
     private Long iduser;
     
      // Nombre de usuario del aprendiz
-    @Column
+    @Column (name ="Nombres", nullable = false,length = 20)
     private String nomuser;
     
     
     // Apellidos completos del aprendiz
-     @Column
+     @Column (name ="Apellidos", nullable = false,length = 25)
     private String apellidos;
      
       // Correo electrónico de contacto
-     @Column
+     @Column (name ="email", unique = true, nullable = false)
     private String email;
 
      /**
